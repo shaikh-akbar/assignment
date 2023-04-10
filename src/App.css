@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+body{
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button{
+  border-radius: 3px;
+  border:1px  solid orange;
+  font-size: medium;
+  font-size: 20px;
+  padding:6px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  width: 100%;
+  height:100vh;
+  display: flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar{
+  width:40%;
+  padding:10px;
+  background:aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  height:100vh;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+  
+}
+.icons{
+  display: flex;
+   gap: 30px;
+}
+.icons i{
+  font-size: 26px;
+}
+.closeicon{ 
+  display: flex;
+  justify-content: space-between;
+  position:absolute;
+  gap: 40px;
+  padding-left:10px;
+  padding-top: 6px;
+  
+
+}
+.closeicon button{
+  border-radius: 50%;
+  background: rgb(230, 229, 229);
+  border: transparent;
+}
+.image-container
+{
+  background-image: linear-gradient(to right top, #4e4349, #5a4e52, #67595b, #736464, #7e706d, #7d726c, #7b736b, #78756c, #696c63, #5b625c, #4f5855, #454e4e);  width:65%;
+  height: 100vh;
+  padding: 10px;
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: center;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:900px){
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
   }
-  to {
-    transform: rotate(360deg);
+  .sidebar{
+    width: 100%;
+  }
+  .image-container{
+    width: 100%;
+  }
+  .closeicon{
+    display: none;
   }
 }
